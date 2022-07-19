@@ -30,7 +30,7 @@ export default function () {
                     sm:text-lg md:text-xl text-md text-center '>
                         Ready to watch? Enter your email to create or restart your membership.
                     </h1>
-                    <div className='mt-10 flex items-center justify-center'>
+                    <div className='mt-10 flex items-center justify-center '>
                     <input type="text" placeholder="Email address" id='input'  />
                <button className="bg-red-600 text-white font-bold border-none inline-block"><h1>Get Started  </h1></button>
                     </div>

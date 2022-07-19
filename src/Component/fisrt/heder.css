@@ -33,3 +33,8 @@ button{
     background: black;
 }
 }
+@media only screen and (max-width: 500px){
+#btn{
+    padding: 5px 25px !important;
+}
+}
