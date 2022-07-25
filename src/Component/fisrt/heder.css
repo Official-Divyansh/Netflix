@@ -1,6 +1,6 @@
 
 body{
-    background-color: #222222;
+    background-color: #222222 !important;
 }
 #bg_image{
     background: url('https://assets.nflxext.com/ffe/siteui/vlv3/1ef84595-1fdb-4404-adac-15215ceeb3ae/7645af9d-2679-4f54-b57d-3a6b5c670e14/IN-en-20220711-popsignuptwoweeks-perspective_alpha_website_large.jpg') no-repeat ;
