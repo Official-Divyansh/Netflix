@@ -15,13 +15,13 @@ export default function () {
                 <div className='absolute z-20 w-[100%] flex items-center justify-center flex-col mt-20'>
                     <h1 className='text-white 
                     font-bold text-4xl
-                    sm:text-5xl md:text-6xl '>Unlimited movies, TV
+                    sm:text-5xl md:text-6xl text-center '>Unlimited movies, TV
                     <br></br>	&nbsp;	&nbsp; shows and more.
                     </h1>
                     <h1
                     className='text-white
                     font-normal
-                    sm:text-xl md:text-2xl text-2xl  '>
+                    sm:text-xl md:text-2xl text-2xl text-center '>
                         Watch anywhere. Cancel anytime.
                         <br></br>
                     </h1>
