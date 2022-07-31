@@ -25,13 +25,13 @@ export default function Banner({ title, url }) {
 
           <Navbar/>
 
-            <div className='relative  h-[40vh] md:h-[78vh] 2xl:h-[68vh] w-[100%] overflow-hidden z-10'>
+            <div className='relative  h-[30vh] sm:h-[40vh] md:h-[78vh] 2xl:h-[68vh] w-[100%] overflow-hidden z-10'>
                 <div className='w-[100%] h-[80vh] absolute  bg-gradient-to-t from-[rgba(0,0,0,.9)] to-transparent-500 z-40 '></div>
                 {
                     title ? (
                         <div className='absolute sm:left-[10%]  top-[30%] left-[5%] z-50 sm:h-[100%] overflow-hidden'>
                             <h1 className='text-white text-xl sm:text-4xl font-semibold lg:text-6xl'>{title.toUpperCase()}</h1>
-                            <p className=' text-green-300 text-xs sm:text-md md:text-base mt-3 mb-3' id='glow'>94% liked | 2022</p>
+                            <p className=' text-green-300 text-xs sm:text-md md:text-base mt-2 mb-3' id='glow'>94% liked | 2022</p>
                             <button className='bg-red-500 rounded-md !pt-1 !pb-1 
             sm:!pt-2 sm:!pb-2 sm:text-sm text-white text-xs mr-2 !pl-8 !pr-8'>Play</button>
 
