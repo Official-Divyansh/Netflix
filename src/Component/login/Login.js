@@ -6,6 +6,8 @@ import './login.css'
 import fire from '../../firebase'
 import { useNavigate } from 'react-router-dom'
 import Loading from './Loading'
+import { BallTriangle } from  'react-loader-spinner'
+
 
 export default function Login() {
   const [user, setUser] = useState('');
@@ -15,6 +17,7 @@ export default function Login() {
   const [passworderr, setPassworderr] = useState('');
   const [hasAccount, setHasAccount] = useState(false)
   const [disable, setDisable] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   const navigate = useNavigate()
   const clearInput = () => {
@@ -65,16 +68,12 @@ export default function Login() {
     fire.auth().onAuthStateChanged(user => {
       if (user) {
         setDisable(true)
-        let timer = setInterval(() => {
-          <Loading />
-          console.log("login")
-        }, 1000);
+        setLoading(true)
         setTimeout(() => {
-          clearInterval(timer)
+          setLoading(false)
           navigate('/home')
-        }, 5000);
-        // clearInput();
-        // setUser(user);
+        }, 4000);
+        
       } else {
         setUser("");
       }
@@ -85,7 +84,14 @@ export default function Login() {
     authListner();
   }, []);
 
+  // if(loading){
+  //   return (
+  //     <Loading />
+  //   )
+  // }
   return (
+    <>
+    
     <div className='h-[140vh] w-[100%] ' id='bg_image2'>
 
       <Nav login={false} />
@@ -132,9 +138,24 @@ export default function Login() {
           </div>
 
         </div>
+          {
+            loading &&
+        <div className='absolute flex items-center justify-center h-screen'>
+            <BallTriangle
+            height = "800"
+            width = "100"
+            radius = "5"
+            color = 'pink'
+            ariaLabel = 'three-dots-loading'     
+            wrapperStyle
+            wrapperClass
+            />
+    </div>
+          }
       </div>
       <hr></hr>
       <Footer />
     </div>
+    </>
   )
 }

@@ -9,6 +9,19 @@ export default function Banner({ title, url }) {
 
     
 
+    const container = {
+        backgroundImage: `url("https://occ-0-116-2219.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABVJ90MJX5sJq91gaCT_zrgmj7Tpl3Fxjr87kNobqy9Z2eow8Eiqt69hZB8OeYE06RMJhW3irEKean49EVThD7BpA--7R6APVGGFZ.jpg?r=f10")`,
+        backgroundRepeat : 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+    }
+    const wrapper = {
+        backgroundImage: `url("${url}")`,
+        backgroundRepeat : 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+    }
+
     const favList = useSelector((state) => state)
     const dispatch = useDispatch()
     const AddToList = () => {
@@ -25,7 +38,7 @@ export default function Banner({ title, url }) {
 
           <Navbar/>
 
-            <div className='relative  h-[30vh] sm:h-[40vh] md:h-[78vh] 2xl:h-[68vh] w-[100%] overflow-hidden z-10'>
+            <div className='relative h-[45vh] sm:h-[70vh]  w-[100%] overflow-hidden z-10'  style={url? wrapper : container}>
                 <div className='w-[100%] h-[80vh] absolute  bg-gradient-to-t from-[rgba(0,0,0,.9)] to-transparent-500 z-40 '></div>
                 {
                     title ? (
@@ -47,7 +60,7 @@ export default function Banner({ title, url }) {
                         </div>
                 }
 
-                <img src={url ? url : 'https://occ-0-116-2219.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABVJ90MJX5sJq91gaCT_zrgmj7Tpl3Fxjr87kNobqy9Z2eow8Eiqt69hZB8OeYE06RMJhW3irEKean49EVThD7BpA--7R6APVGGFZ.jpg?r=f10'} width='100%' />
+                {/* <img src={url ? url : 'https://occ-0-116-2219.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABVJ90MJX5sJq91gaCT_zrgmj7Tpl3Fxjr87kNobqy9Z2eow8Eiqt69hZB8OeYE06RMJhW3irEKean49EVThD7BpA--7R6APVGGFZ.jpg?r=f10'} width='100%' /> */}
             </div>
 
         </div>
